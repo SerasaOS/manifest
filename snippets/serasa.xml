@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="gitlab"
+           fetch="https://gitlab.com" />
+
+  <remote name="serasa"
+          fetch="https://github.com/SerasaOS"
+          revision="refs/heads/13"/>
+
+  <remote  name="devices"
+           fetch="https://github.com/Serasa-Devices"
+           revision="refs/heads/13" />
+
+  <remote  name="spark-gitlab"
+           fetch="https://gitlab.com/spkal01"
+           revision="refs/heads/pyro" />
+
+  <remote  name="serasa-gitlab"
+           fetch="https://gitlab.com/strongreasons"
+           revision="refs/heads/13" />
+
+  <!-- Device repos -->
+  <project path="device/serasa/sepolicy" name="device_serasa_sepolicy" remote="serasa" />
+  <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="serasa" />
+  <project path="device/qcom/sepolicy_vndr-legacy-um" name="device_qcom_sepolicy_vndr-legacy-um" remote="serasa" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="serasa" />
+
+  <!-- External repos -->
+  <project path="external/hosts" name="StevenBlack/hosts" remote="github" revision="master" />
+  <project path="external/tigervnc" name="external_tigervnc" remote="serasa" />
+  <project path="external/yifan" name="external_yifan" remote="serasa" />
+
+  <!-- Framework repos -->
+  <project path="frameworks/av" name="frameworks_av" remote="serasa" />
+  <project path="frameworks/base" name="frameworks_base" remote="serasa" />
+  <project path="frameworks/native" name="frameworks_native" remote="serasa" />
+  <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" remote="serasa" />
+
+  <!-- General repos -->
+  <project path="art" name="art" remote="serasa" />
+  <project path="bionic" name="bionic" remote="serasa" />
+  <project path="bootable/recovery" name="bootable_recovery" remote="serasa" />
+  <project path="build/make" name="build_make" remote="serasa" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" remote="serasa" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="manifest" name="manifest" remote="serasa" />
+
+  <!-- Hardware repos -->
+  <project path="hardware/xiaomi" name="hardware_xiaomi" remote="serasa" />
+
+  <!-- Lineage repos-->
+  <project path="lineage-sdk" name="lineage-sdk" remote="serasa" />
+  <project path="packages/apps/LineageParts" name="packages_apps_LineageParts" remote="serasa" />
+
+  <!-- Modules repos -->
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" remote="serasa" />
+  <project path="packages/modules/DnsResolver" name="packages_modules_DnsResolver" remote="serasa" />
+
+  <!-- Packages repos -->
+  <project path="packages/apps/DesktopMode" name="packages_apps_DesktopMode" remote="serasa" />
+  <project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="serasa" />
+  <project path="packages/apps/Feelslike" name="packages_apps_Feelslike" remote="serasa-gitlab" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="serasa" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="serasa" />
+  <project path="packages/apps/ParallelSpace" name="packages_apps_ParallelSpace" remote="serasa" />
+  <project path="packages/apps/SerasaWallpaperStub" name="packages_apps_serasaWallpaperStub" remote="serasa" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="serasa" />
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="serasa" />
+  <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" remote="serasa" />
+
+  <!-- Services repos -->
+  <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="serasa" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="serasa" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="serasa" />
+  <project path="packages/services/VncFlinger" name="packages_services_VncFlinger" remote="serasa" />
+
+  <!-- System repos -->
+  <project path="system/core" name="system_core" remote="serasa" />
+  <project path="system/memory/lmkd" name="system_memory_lmkd" remote="serasa" />
+
+  <!-- vendor repos -->
+  <project path="vendor/addons" name="vendor_addons" remote="serasa" />
+  <project path="vendor/gms" name="vendor_gms" remote="spark-gitlab" />
+  <project path="vendor/pixel-framework" name="vendor_pixel-framework" remote="serasa" />
+  <project path="vendor/serasa" name="vendor_serasa" remote="serasa" />
+
+</manifest>
