@@ -29,6 +29,7 @@
   <!-- External repos -->
   <project path="external/hosts" name="StevenBlack/hosts" remote="github" revision="master" />
   <project path="external/tigervnc" name="external_tigervnc" remote="serasa" />
+  <project path="external/piex" name="external_piex" groups="pdk" remote="serasa" />
   <project path="external/yifan" name="external_yifan" remote="serasa" />
 
   <!-- Framework repos -->
