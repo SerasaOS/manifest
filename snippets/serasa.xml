@@ -71,7 +71,7 @@
   <!-- Packages repos -->
   <project path="packages/apps/DesktopMode" name="packages_apps_DesktopMode" remote="serasa" />
   <project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="serasa" />
-  <project path="packages/apps/Feelslike" name="packages_apps_Feelslike" remote="serasa-gitlab" />
+  <project path="packages/apps/Feelslike" name="packages_apps_Feelslike" remote="serasa" />
   <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="serasa" />
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="serasa" />
   <project path="packages/apps/ParallelSpace" name="packages_apps_ParallelSpace" remote="serasa" />
