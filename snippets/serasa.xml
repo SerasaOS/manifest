@@ -59,6 +59,7 @@
 
   <!-- Hardware repos -->
   <project path="hardware/xiaomi" name="hardware_xiaomi" remote="serasa" />
+  <project path="hardware/google/interfaces" name="hardware_google_interfaces" groups="pdk" remote="serasa" />
 
   <!-- Lineage repos-->
   <project path="lineage-sdk" name="lineage-sdk" remote="serasa" />
