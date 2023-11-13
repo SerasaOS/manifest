@@ -1,11 +1,10 @@
-![SerasaOS](https://raw.githubusercontent.com/Tiktodz/prjkt/main/banner/manifest.jpg)
 :coffee: `SerasaOS` :coffee:
 =======
 
 Requirements
 =======
-- Around 500GB disk space.
-- Around 18GB RAM running Linux.
+- Around `500GB` disk space.
+- Around `18GB` RAM running Linux.
 
 Start off by following these steps:
 ----------------------
@@ -22,18 +21,25 @@ To do that, run these commands:
    cd serasa
 ```
 
-To initialize your local repository, run this command:
+🔶 To initialize your local repository, run this command:
 ------------------------------------------------------
 
 ```bash
 repo init -u https://github.com/SerasaOS/manifest -b 13
 ```
 
-Afterwards, sync the source by running this command:
+💾 To save bandwith and space, run this command:
+------------------------------------------------------
+
+```bash
+repo init --depth=1 --no-repo-verify -u https://github.com/SerasaOS/manifest -b 13 -g default,-mips,-darwin,-notdefault
+```
+
+🔄 Afterwards, sync the source by running this command:
 ----------------
 
 ```bash
-repo sync --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 ```
 
 
@@ -43,15 +49,15 @@ repo sync --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$
 In case you are building Mac OS X, you are required to install coreutils from MacPorts before you continue.
 In order to build, use this command:
 ```bash
-   . build/envsetup.sh
+. build/envsetup.sh
 ```
 
 ```bash
-   lunch serasa_<devicecodename>-userdebug
+lunch serasa_<devicecodename>-userdebug
 ```
 
 ```bash
-   mka bacon
+mka bacon
 ```
 
 ---------------
